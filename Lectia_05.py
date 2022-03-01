@@ -28,3 +28,4 @@ print(f'People between ages 14 and 18 :  {list_14_18[Nume]}' )
 print(f'People between ages 18 and 25 :  {list_18_25[Nume] }' )
 print(f'People between ages 26 and 45 :  {list_26_45[Nume] }' )
 print(f'People above age 45  :  {list_45[Nume]}' )
+
