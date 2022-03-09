@@ -1,31 +1,42 @@
-nr_person = int(input("Introduceti cite persoane vor fi: "))
-dict_persone = dict()
-date = dict()
-list_14_18 = dict()
-list_18_25 = dict()
-list_26_45 = dict()
-list_45 = dict()
-for n in range(nr_person):
-    Nume = input(f"Numele {n +1} persoane: ")
-    Prenume = input(f'Prenumele {n+1}:  ')
-    Virsta = int(input(f'Virsta {n+1}: '))
-    if Virsta <= 14:
-        print("Mai cresti")
+nr_candidati = int(input('Cite persoane: '))
+candidati = dict()
+list_14_18 = []
+list_18_25 = []
+list_26_45 = []
+list_45 = []
+for n in range (nr_candidati):
+    nume = []
+    Nume = input('Numele: ')
+    Prenume = input('Prenume: ')
+    Virsta = int(input('Virsta: '))
+    if Virsta < 14:
+        print('Mai cresti')
     else:
-        date['Nume'] = Nume
-        date['Prenume'] = Prenume
-        date['Virsta'] = Virsta
-        dict_persone[Nume] = date
-        if Virsta < 19:
-            list_14_18[Nume] = date['Nume']
-        elif 18 < Virsta < 25:
-            list_18_25[Nume] = date['Nume']
-        elif 24 < Virsta < 45:
-            list_26_45[Nume] = date['Nume']
-        else:
-            list_45[Nume] = date
-print(f'People between ages 14 and 18 :  {list_14_18[Nume]}' )
-print(f'People between ages 18 and 25 :  {list_18_25[Nume] }' )
-print(f'People between ages 26 and 45 :  {list_26_45[Nume] }' )
-print(f'People above age 45  :  {list_45[Nume]}' )
+        nume.append(Nume)
+        nume.append(Prenume)
+        nume.append(Virsta)
+        candidati[n] = nume
+name_14_18 = []
+name_18_25 = []
+name_26_45 = []
+name_45 = []
+for n in range(len(candidati)):
+    if 14 < candidati[n][2] < 19:
+        list_14_18.append(candidati[n])
+        name_14_18.append(list_14_18[-1][0])
+    elif 18 < candidati[n][2] < 26:
+        list_18_25.append(candidati[n])
+        name_18_25.append(list_18_25[-1][0])
+    elif 25 < candidati[n][2] < 46:
+        list_26_45.append(candidati[n])
+        name_26_45.append(list_26_45[-1][0])
+    else:
+        list_45.append(candidati[n])
+        name_45.append(list_45[-1][0])
 
+
+
+
+print(candidati)
+print(name_14_18)
+print(f"Oameni cu vrsta de la 14-18 {','.join(name_14_18)}")
