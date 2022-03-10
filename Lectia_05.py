@@ -39,4 +39,11 @@ for n in range(len(candidati)):
 
 print(candidati)
 print(name_14_18)
-print(f"Oameni cu vrsta de la 14-18 {','.join(name_14_18)}")
+if len(name_14_18) > 0:
+    print(f"Oameni cu vrsta de la 14-18 {','.join(name_14_18)}")
+if len(name_18_25) > 0:
+    print(f"Oameni cu vrsta de la 18-25 {','.join(name_18_25)}")
+if len(name_26_45) > 0:
+    print(f"Oameni cu vrsta de la 26-45 {','.join(name_26_45)}")
+if len(name_45) > 0:
+    print(f"Oamneii cu virsta mai mult de 45 {','.join(name_45)}")
