@@ -46,4 +46,4 @@ if len(name_18_25) > 0:
 if len(name_26_45) > 0:
     print(f"Oameni cu vrsta de la 26-45 {','.join(name_26_45)}")
 if len(name_45) > 0:
-    print(f"Oamneii cu virsta mai mult de 45 {','.join(name_45)}")
+    print(f"Oamnei cu virsta mai mult de 45 {','.join(name_45)}")
